@@ -1,5 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BA4QCN</title>
+  </head>
+  <body>
+    <p>Sorry, this website is under construction.</p>
+    <p>Redirecting to <a id="qrz" href="https://www.qrz.com/db/ba4qcn">my QRZ.com homepage</a> ...</p>
+  </body>
+</html>
 <script>
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
   ((function() {
-    window.location.href = "https://www.qrz.com/db/ba4qcn";
+    sleep(5000);
+    window.location.href = document.getElementById("qrz").attribute;
   })());
 </script>
