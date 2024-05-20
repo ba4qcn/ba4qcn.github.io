@@ -4,7 +4,19 @@
     <title>BA4QCN</title>
   </head>
   <body>
-    <p>Sorry, this website is under construction.</p>
-    <p>Please redirect to <a id="redirect" href="https://www.qrz.com/db/ba4qcn">my QRZ.com homepage</a>.</p>
+    <p>感谢你访问本网站！但非常抱歉，网站还在制作过程中。</p>
+    <p>我的呼号是 BA4QCN，碰巧 .cn 是中国国家顶级域名后缀，于是我就注册了 ba4q.cn 这个域名。</p>
+    <p>在 <span id="seconds">若干</span> 秒后，本页面将自动跳转到我的 <a id="redirect" href="https://www.qrz.com/db/ba4qcn">QRZ.com</a> 主页。如果您没有跳转，请手动点击。</p>
+    <p>希望与你在空中相会，VY 73!</p>
+    <script>
+      const sleep = (time) => new Promise((r) => setTimeout(r, time));
+      window.onload = async() => {
+        for (var i = 10; i >= 0; i --) {
+          document.getElementById("seconds").innerHTML = i;
+          await sleep(1000);
+        }
+        window.location = document.getElementById("redirect").href;
+      }
+    </script>
   </body>
 </html>
