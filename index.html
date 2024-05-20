@@ -1,53 +1,67 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BA4QCN</title>
-    <style>
-      main {
-        text-align: center;
+
+<head>
+  <title>BA4QCN</title>
+  <style>
+    main {
+      text-align: center;
+    }
+
+    .red {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <p>
+      感谢你访问本网站！但如你所见，这里还是一片空白。
+    </p>
+    <p>
+      我的呼号是 BA4Q<span class="red">CN</span>，
+      碰巧 <span class="red">.cn</span> 是中国国家顶级域名后缀，
+      于是我就注册了 ba4q<span class="red">.cn</span> 这个域名。
+      <br />
+      目前还没想法用网站来做什么，未来可能打算写博客之类的。
+    </p>
+    <p>
+      为了不显得那么空旷，这里放了一张图：
+    </p>
+    <p>
+      <img src="img/hihu-meiling-small.jpg" width="500px" height="auto" />
+      <br />
+      <small>摄于：大气与地球系统区域过程综合观测试验基地(SORPES)，南京大学仙林校区，2018-10-24</small>
+    </p>
+    <p>
+      最后，希望与你在空中相会，VY 73!
+    </p>
+    <hr />
+    <p id="redirect-paragraph">
+      在 <span id="seconds">若干</span> 秒后，
+      本页面将自动跳转到我的 <a id="redirect" href="https://www.qrz.com/db/ba4qcn">QRZ.com</a> 主页
+      <span id="stop-redirect-text" style="display: none">，或<a href="#" id="stop-redirect">点此停止自动跳转</a></span>。
+      <br />
+      如果您没有跳转，请手动点击。
+    </p>
+  </main>
+  <script>
+    var is_redirect = true;
+    const sleep = (time) => new Promise((r) => setTimeout(r, time));
+    window.onload = async () => {
+      document.getElementById("stop-redirect-text").style.display = "inline";
+      for (var i = 15; i >= 0 && is_redirect; i--) {
+        document.getElementById("seconds").innerHTML = i;
+        await sleep(1000);
       }
-      .red {
-        color: red;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <p>
-        感谢你访问本网站！但如你所见，这里还是一片空白。
-      </p><p>
-        我的呼号是 BA4Q<span class="red">CN</span>，
-        碰巧 <span class="red">.cn</span> 是中国国家顶级域名后缀，
-        于是我就注册了 ba4q<span class="red">.cn</span> 这个域名。
-        <br />
-        目前还没想法用网站来做什么，未来可能打算写博客之类的。
-      </p><p>
-        最后，希望与你在空中相会，VY 73!
-      </p>
-      <hr />
-      <p id="redirect-paragraph">
-        在 <span id="seconds">若干</span> 秒后，
-        本页面将自动跳转到我的 <a id="redirect" href="https://www.qrz.com/db/ba4qcn">QRZ.com</a> 主页
-        <span id="stop-redirect-text" style="display: none">，或<a href="#" id="stop-redirect">点此停止自动跳转</a></span>。
-        <br />
-        如果您没有跳转，请手动点击。
-      </p>
-    </main>
-    <script>
-      var is_redirect = true;
-      const sleep = (time) => new Promise((r) => setTimeout(r, time));
-      window.onload = async() => {
-        document.getElementById("stop-redirect-text").style.display = "inline";
-        for (var i = 15; i >= 0 && is_redirect; i --) {
-          document.getElementById("seconds").innerHTML = i;
-          await sleep(1000);
-        }
-        if (is_redirect) window.location = document.getElementById("redirect").href;
-      }
-      document.getElementById("stop-redirect").onclick = function() {
-        is_redirect = false;
-        document.getElementById("seconds").innerHTML = "∞";
-      }
-    </script>
-  </body>
+      if (is_redirect) window.location = document.getElementById("redirect").href;
+    }
+    document.getElementById("stop-redirect").onclick = function () {
+      is_redirect = false;
+      document.getElementById("seconds").innerHTML = "∞";
+    }
+  </script>
+</body>
+
 </html>
