@@ -11,7 +11,7 @@
     <script>
       const sleep = (time) => new Promise((r) => setTimeout(r, time));
       window.onload = async() => {
-        for (var i = 10; i >= 0; i --) {
+        for (var i = 15; i >= 0; i --) {
           document.getElementById("seconds").innerHTML = i;
           await sleep(1000);
         }
