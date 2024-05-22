@@ -6,32 +6,55 @@
   <style>
     body {
       text-align: center;
-      max-width: 700px;
+      max-width: 1200px;
       margin: auto;
+      padding: 1em;
     }
+
+    main {
+      display: flex;
+    }
+
+    #bio {
+      float: left;
+      width: 65%;
+    }
+
+    #x-display {
+      width: 30%;
+      margin: 1em;
+      float: left;
+    }
+
     img {
       height: auto;
     }
+
     del {
       text-decoration: none;
       background-color: black;
     }
+
     del:hover {
       color: white;
     }
+
     .red {
       color: #C00000;
     }
+
     div.notice {
       background-color: #FFD;
       border: solid #CCA 2px;
       padding: 0.5em;
     }
+
     .icon img {
       margin: 0.5em;
       width: 2em;
       height: auto;
     }
+
     footer {
       margin-bottom: 1em;
     }
@@ -40,64 +63,74 @@
 
 <body>
   <main>
-    <p>
-      <a href="https://ba4q.cn/" target="_blank"><img src="img/ba4qcn.svg" width="100px" /><a>
-    </p>
-    <div class="notice" id="redirect-notice" style="display:none"> 
-      <p>
-        在 <span id="seconds"></span> 秒后，
-        本页面将自动跳转到我的 <a id="redirect" href="https://www.qrz.com/db/ba4qcn">QRZ.com</a> 主页，
-        或<a href="#" id="stop-redirect">点此停止自动跳转</a>。
-        <br />
-        如果您没有跳转，请手动点击。
-      </p>
+    <div id="x-display">
+      <a class="twitter-timeline" href="https://twitter.com/ba4qcn?ref_src=twsrc%5Etfw">Tweets by ba4qcn</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
-    <p>
-      感谢你访问本网站！但如你所见，这里基本还是一片空白。
-    </p>
-    <p>
-      我的呼号是 BA4Q<span class="red">CN</span>，
-      碰巧 <span class="red">.cn</span> 是中国国家顶级域名后缀，
-      于是我就注册了 ba4q<span class="red">.cn</span> 这个域名。
-      <br />
-      不过目前对拿网站来做什么还没想法，未来可能打算写博客之类的。
-    </p>
-    <p>
-      最后，希望与你在空中相会，VY 73!
-    </p>
-    <p>
-      <img src="img/hihu-meiling-small.jpg" width="600px" />
-      <br />
-      <small>
-        大气与地球系统区域过程综合观测试验基地(SORPES)，南京大学仙林校区，摄于2018-10-24 <br />
-        <del>（为了不显得那么空旷，放一张图在这）</del>
-      </small>
-    </p>
+    <div id="bio">
+      <p>
+        <a href="https://ba4q.cn/" target="_blank"><img src="img/ba4qcn.svg" width="100px" /><a>
+      </p>
+      <div class="lang-sel">
+        <p lang="cn">
+          感谢你访问本网站！但如你所见，这里基本还是一片空白。
+        </p>
+        <p lang="en">
+          Thank you for visiting this website! But as you can see, here is still basically empty.
+        </p>
+        <p lang="cn">
+          我被分配到的呼号是 BA4Q<span class="red">CN</span>，
+          碰巧 <span class="red">.cn</span> 是中国国家顶级域名后缀，
+          于是我就注册了 ba4q<span class="red">.cn</span> 这个域名。
+          <br />
+          不过目前对拿网站来做什么还没想法，未来可能打算写博客之类的。
+        </p>
+        <p lang="en">
+          My callsign is BA4Q<span class="red">CN</span>,
+          the suffix of which (<span class="red">.cn</span>) is coincidentally the suffix of the national top domain name in China,
+          therefore I bought the domain name ba4q<span class="red">.cn</span>.
+          <br />
+          For now, I have not figured out about what to do with this website yet.
+          <br />
+          Maybe it will become my blog in the future.
+        </p>
+        <p lang="cn">
+          最后，希望与你在空中相会，VY 73!
+        </p>
+        <p lang="en">
+          In the end, hope to see you on the air, VY 73!
+        </p>
+        <p>
+          <img src="img/hihu-meiling-small.jpg" width="600px" />
+          <br />
+          <small lang="cn">
+            大气与地球系统区域过程综合观测试验基地(SORPES)，南京大学仙林校区，摄于2018-10-24 <br />
+            <del>（为了不显得那么空旷，放一张图在这）</del>
+          </small>
+          <small lang="en">
+            Station for Observing Regional Processes of the Earth System (SORPES), <br />
+            Nanjing Univeristy Xianlin Campus, photographed on 2018-10-24 <br />
+            <del>(I put a picture here so that the page seemed to be less empty)</del>
+          </small>
+        </p>
+      </div>
+    </div>
   </main>
+
   <footer>
     <hr />
-    <small>最后更新：2024-05-20</small>
+    <small>Last updated: 2024-05-22</small>
     <p>
-      <a class="icon" href="https://www.qrz.com/db/ba4qcn" target="_blank"><img src="https://www.qrz.com/favicon.ico" /></a>
-      <a class="icon" href="https://x.com/ba4qcn" target="_blank"><img src="https://abs.twimg.com/responsive-web/client-web/icon-svg.ea5ff4aa.svg" /></a>
+      <a class="icon" href="https://www.qrz.com/db/ba4qcn" target="_blank"><img
+          src="https://www.qrz.com/favicon.ico" /></a>
+      <a class="icon" href="https://x.com/ba4qcn" target="_blank"><img
+          src="https://abs.twimg.com/responsive-web/client-web/icon-svg.ea5ff4aa.svg" /></a>
     </p>
   </footer>
-  <script>
-    var is_redirect = true;
-    const sleep = (time) => new Promise((r) => setTimeout(r, time));
-    window.onload = async () => {
-      document.getElementById("redirect-notice").style.display = "block";
-      for (var i = 15; i >= 0 && is_redirect; i--) {
-        document.getElementById("seconds").innerHTML = i;
-        await sleep(1000);
-      }
-      if (is_redirect) window.location = document.getElementById("redirect").href;
-    }
-    document.getElementById("stop-redirect").onclick = function () {
-      is_redirect = false;
-      document.getElementById("redirect-notice").style.display = "none";
-    }
+
+  <script src="javascript/lang-sel.js"></script>
   </script>
+
 </body>
 
 </html>
