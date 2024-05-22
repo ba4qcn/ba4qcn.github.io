@@ -8,7 +8,7 @@ function setLang(element, lang) {
         ele.style.display = "none";
     });
 }
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function() {
     var langSelElements = document.getElementsByClassName("lang-sel");
     for (var i = 0; i < langSelElements.length; i++) {
         element = langSelElements[i];
@@ -33,4 +33,4 @@ window.onload = function () {
         });
         setLang(element, "cn");
     }
-}
+});
