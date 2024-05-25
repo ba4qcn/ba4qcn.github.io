@@ -8,7 +8,7 @@ function setLang(element, lang) {
         ele.style.display = "none";
     });
 }
-document.addEventListener("DOMContentLoaded", function() {
+function initLangSel() {
     var langSelElements = document.getElementsByClassName("lang-sel");
     for (var i = 0; i < langSelElements.length; i++) {
         element = langSelElements[i];
@@ -32,5 +32,8 @@ document.addEventListener("DOMContentLoaded", function() {
             setLang(element, event.target.value);
         });
         setLang(element, "cn");
+        element.classList.remove("lang-sel");
     }
-});
+}
+document.addEventListener("DOMContentLoaded", initLangSel);
+((initLangSel)());
