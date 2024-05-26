@@ -66,24 +66,7 @@
       in the address for postal mail, thank you!
     </p>
   </div>
-  <script>
-    function setLang(element, lang) {
-      var showElements = element.querySelectorAll(`[lang="${lang}"]`);
-      var hideElements = element.querySelectorAll(`[lang]:not([lang="${lang}"])`);
-      showElements.forEach(function (ele) {
-          ele.style = "";
-      });
-      hideElements.forEach(function (ele) {
-          ele.style.display = "none";
-      });
-    }
-    element = document.getElementById("body");
-    sel = document.getElementById("lang-sel");
-    sel.addEventListener("change", (event) => {
-      setLang(element, event.target.value);
-    });
-    setLang(element, "cn");
-  </script>
+  
 </body>
 
 </html>
