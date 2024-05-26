@@ -36,4 +36,5 @@ function initLangSel() {
     }
 }
 document.addEventListener("DOMContentLoaded", initLangSel);
+document.addEventListener("onload", initLangSel);
 ((initLangSel)());
